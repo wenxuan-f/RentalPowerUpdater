@@ -23,7 +23,7 @@ public class Sites{
         if (siteMap.containsKey(site_number)){
             return siteMap.get(site_number);
         }
-        System.out.println("Function <getStore> cannot find site: " + site_number);
+        System.out.println("Warning: Function <getStore> cannot find site: " + site_number);
         return null;
     }
     // Get store by ID
@@ -34,13 +34,13 @@ public class Sites{
                 return s;
             }
         }
-        System.out.println("This SITE_ID is not found in the library: " + site_id);
+        System.out.println("Warning: This SITE_ID is not found in the library: " + site_id);
         return null;
     }
 
     // Get array of Keys - Site_Number
-    public Set<Integer> getSiteNumList(){
-        return siteMap.keySet();
+    public List<Integer> getSiteNumList(){
+        return new ArrayList<Integer>(siteMap.keySet());
     }
 
     // Get size
