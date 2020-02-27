@@ -23,19 +23,14 @@ public class SqlFunnel {
      * Constructor
      */
     public SqlFunnel(){
-        String file = "db_creds.txt";
-        InputStream in = SqlFunnel.class.getResourceAsStream(file);
-        if (in == null){
-            throw new IllegalArgumentException("SQL server credential file not found: " + file);
-        }
-        BufferedReader br = new BufferedReader(new InputStreamReader(in));
-        try {
-            connectionUrl = "jdbc:sqlserver://" + br.readLine() + ";databaseName=FSR;" +
-                    "user=" + br.readLine() + ";" +
-                    "password=" + br.readLine() + ";";
-        } catch (IOException eIO){
-            eIO.printStackTrace();
-        }
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Please enter user name for database: ");
+        String usr = scanner.next();
+        System.out.print("Please enter password for database: ");
+        String pwd = scanner.next();
+        connectionUrl = "jdbc:sqlserver://13.57.123.119;databaseName=FSR;" +
+                "user=" + usr + ";" +
+                "password=" + pwd + ";";
     }
 
     /**
@@ -457,5 +452,6 @@ public class SqlFunnel {
             System.out.println(mainSelection);
             opt1 = input.nextInt();
         }
+        System.out.println("Thanks for using. See you next time~");
     }
 }

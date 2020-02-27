@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="RentalPowerUpdater:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/RentalPowerUpdater_jar</output-path>
+    <root id="archive" name="RentalPowerUpdater.jar">
+      <element id="module-output" name="RentalPowerUpdater" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/codehaus/plexus/plexus-utils/1.1/plexus-utils-1.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/commons-lang/commons-lang/2.1/commons-lang-2.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/microsoft/sqlserver/mssql-jdbc/7.4.1.jre11/mssql-jdbc-7.4.1.jre11.jar" path-in-jar="/" />
+      <element id="library" level="project" name="Maven: com.microsoft.sqlserver:mssql-jdbc:7.4.1.jre11" />
+      <element id="library" level="project" name="Maven: org.codehaus.plexus:plexus-utils:1.1" />
+      <element id="library" level="project" name="Maven: commons-lang:commons-lang:2.1" />
+    </root>
+  </artifact>
+</component>
