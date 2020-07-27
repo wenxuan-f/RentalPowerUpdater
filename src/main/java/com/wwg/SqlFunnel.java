@@ -239,11 +239,11 @@ public class SqlFunnel {
             String queryUploadRPB = "UPDATE [FSR].[dbo].[Rental_Power] " +
                     "SET [RP_benchmark] = " + rpBenchmark +
                     ", [Tier_01] = " + Math.round(rpBenchmark*0.09)*10 +
-                    ", [Tier_02] = " + Math.round(rpBenchmark*0.098)*10 +
-                    ", [Tier_03] = " + Math.round(rpBenchmark*0.106)*10 +
-                    ", [Tier_04] = " + Math.round(rpBenchmark*0.114)*10 +
-                    ", [Tier_05] = " + Math.round(rpBenchmark*0.122)*10 +
-                    ", [Tier_06] = " + Math.round(rpBenchmark*0.130)*10;
+                    ", [Tier_02] = " + Math.round(rpBenchmark*0.1)*10 +
+                    ", [Tier_03] = " + Math.round(rpBenchmark*0.11)*10 +
+                    ", [Tier_04] = " + Math.round(rpBenchmark*0.12)*10 +
+                    ", [Tier_05] = " + Math.round(rpBenchmark*0.13)*10 +
+                    ", [Tier_06] = " + Math.round(rpBenchmark*0.14)*10;
             if (site_id != null){
                 queryUploadRPB +=
                         ", [SITE_ID] = " + site_id +

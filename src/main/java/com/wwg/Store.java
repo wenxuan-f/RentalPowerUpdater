@@ -166,7 +166,7 @@ public class Store {
         // Step 3: If no historical record at all for 5 months average, check short term momentum
         float sumWeightedRP2 = (float) 0;
         double sumWeight2 = 0;
-        for (int delta = -1; delta >= -3; delta --){
+        for (int delta = -2; delta >= -4; delta --){
             Date iterMonth2 = DateUtil.addMonth(date, delta);
             if (iterMonth2.compareTo(getOnboard_Date()) < 0){
                 break;
@@ -206,7 +206,7 @@ public class Store {
         Date lastMonth = DateUtil.stringToDate(DateUtil.lastMonthDayOne());
         float currentSumRP = (float) 0;
         float lastyrSumRP = (float) 0;
-        for (int delta = 0; delta >= -2; delta --){
+        for (int delta = -1; delta >= -3; delta --){
             Date iterMonth = DateUtil.addMonth(lastMonth, delta-12);
             if (iterMonth.compareTo(getOnboard_Date()) < 0){
                 break;
